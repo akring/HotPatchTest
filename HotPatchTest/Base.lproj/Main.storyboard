@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lUz-EZ-bSo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sPd-Nc-n3a">
+            <objects>
+                <navigationController id="lUz-EZ-bSo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tpA-WT-5Ux">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vud-0v-ndE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltY-yu-9TP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354" y="90"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -22,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXz-g9-ZTi">
-                                <rect key="frame" x="131.5" y="36" width="111" height="25"/>
+                                <rect key="frame" x="131.5" y="80" width="111" height="25"/>
                                 <color key="backgroundColor" red="0.80784314869999996" green="0.027450980619999999" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="02s-VE-vcI"/>
@@ -32,17 +48,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isf-Ki-tQj">
-                                <rect key="frame" x="170" y="101" width="34" height="30"/>
+                                <rect key="frame" x="170" y="145" width="34" height="30"/>
                                 <state key="normal" title="Click"/>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n5Y-Ti-ZFc">
-                                <rect key="frame" x="163" y="220.5" width="51" height="31"/>
+                                <rect key="frame" x="163" y="264.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="modeSwitchedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5S-ts-Q4u"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修复模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3h-Mt-tgc">
-                                <rect key="frame" x="155" y="193" width="65.5" height="19.5"/>
+                                <rect key="frame" x="155" y="237" width="65.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,6 +76,7 @@
                             <constraint firstItem="Isf-Ki-tQj" firstAttribute="top" secondItem="RXz-g9-ZTi" secondAttribute="bottom" constant="40" id="tCH-uS-hsO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SJy-yn-YdL"/>
                     <connections>
                         <outlet property="clickButton" destination="Isf-Ki-tQj" id="3lF-su-YPH"/>
                         <outlet property="infoLabel" destination="RXz-g9-ZTi" id="w23-jq-793"/>

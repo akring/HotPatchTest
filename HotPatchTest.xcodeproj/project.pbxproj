@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		61B93B2A5FE00AC1E0293F28 /* Pods_HotPatchTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79354C0326E5DC770CC7E6D /* Pods_HotPatchTest.framework */; };
+		ECA2BF9D1EE7D24B00CFCC04 /* newVC.js in Resources */ = {isa = PBXBuildFile; fileRef = ECA2BF9C1EE7D24B00CFCC04 /* newVC.js */; };
 		ECFB16351EE4F38000C63622 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB16341EE4F38000C63622 /* AppDelegate.swift */; };
 		ECFB16371EE4F38000C63622 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB16361EE4F38000C63622 /* ViewController.swift */; };
 		ECFB163A1EE4F38000C63622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFB16381EE4F38000C63622 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		8612E6208B75A60C92AF3A79 /* Pods-HotPatchTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotPatchTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotPatchTest/Pods-HotPatchTest.release.xcconfig"; sourceTree = "<group>"; };
 		99DF52E91DB8081D464CE5CC /* Pods-HotPatchTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotPatchTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotPatchTest/Pods-HotPatchTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B79354C0326E5DC770CC7E6D /* Pods_HotPatchTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotPatchTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA2BF9C1EE7D24B00CFCC04 /* newVC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = newVC.js; sourceTree = "<group>"; };
 		ECFB16311EE4F38000C63622 /* HotPatchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotPatchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFB16341EE4F38000C63622 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFB16361EE4F38000C63622 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		ECFB16331EE4F38000C63622 /* HotPatchTest */ = {
 			isa = PBXGroup;
 			children = (
+				ECA2BF9C1EE7D24B00CFCC04 /* newVC.js */,
 				ECFB16461EE4F72000C63622 /* jspatch.js */,
 				ECFB16341EE4F38000C63622 /* AppDelegate.swift */,
 				ECFB16361EE4F38000C63622 /* ViewController.swift */,
@@ -155,6 +158,7 @@
 			files = (
 				ECFB163F1EE4F38000C63622 /* LaunchScreen.storyboard in Resources */,
 				ECFB163C1EE4F38000C63622 /* Assets.xcassets in Resources */,
+				ECA2BF9D1EE7D24B00CFCC04 /* newVC.js in Resources */,
 				ECFB16471EE4F72000C63622 /* jspatch.js in Resources */,
 				ECFB163A1EE4F38000C63622 /* Main.storyboard in Resources */,
 			);

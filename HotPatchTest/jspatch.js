@@ -1,3 +1,5 @@
+include('newVC.js')
+
 defineClass("HotPatchTest.ViewController", {
             
             setUpInterface: function () { //覆盖setUpInterface方法
@@ -14,13 +16,10 @@ defineClass("HotPatchTest.ViewController", {
 
 defineClass("HotPatchTest.ViewController", {
             
-            buttonClicked: function () { //覆盖按钮点击事件
+            buttonClicked :function() {
+            console.log("Try to present a new View Controller")
+            var newVC = NewController.alloc().init()
             
-            var alert = require('UIAlertController').alertControllerWithTitle_message_preferredStyle("Succeed!", "Error fixed!", 1)//UIAlertControllerStyleAlert通过反查源码值为1
-            
-            var cancelAction = require('UIAlertAction').actionWithTitle_style_handler("确定", 1, null)//UIAlertActionStyleCancel通过反查源码值为1
-            
-            alert.addAction(cancelAction);
-            self.presentViewController_animated_completion(alert, YES, null);
+            self.navigationController().pushViewController_animated(newVC, YES)
             }
             })
