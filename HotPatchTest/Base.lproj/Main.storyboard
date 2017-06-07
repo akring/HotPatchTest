@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotPatchTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXz-g9-ZTi">
+                                <rect key="frame" x="131.5" y="36" width="111" height="25"/>
+                                <color key="backgroundColor" red="0.80784314869999996" green="0.027450980619999999" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="02s-VE-vcI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isf-Ki-tQj">
+                                <rect key="frame" x="170" y="101" width="34" height="30"/>
+                                <state key="normal" title="Click"/>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n5Y-Ti-ZFc">
+                                <rect key="frame" x="163" y="220.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="modeSwitchedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5S-ts-Q4u"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修复模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3h-Mt-tgc">
+                                <rect key="frame" x="155" y="193" width="65.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n5Y-Ti-ZFc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0mi-as-f4w"/>
+                            <constraint firstItem="n5Y-Ti-ZFc" firstAttribute="top" secondItem="N3h-Mt-tgc" secondAttribute="bottom" constant="8" id="Cdy-et-Zh8"/>
+                            <constraint firstItem="N3h-Mt-tgc" firstAttribute="top" secondItem="Isf-Ki-tQj" secondAttribute="bottom" constant="62" id="Kpf-z2-0E0"/>
+                            <constraint firstItem="Isf-Ki-tQj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QcL-Sf-L2f"/>
+                            <constraint firstItem="RXz-g9-ZTi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuK-qt-AEw"/>
+                            <constraint firstItem="RXz-g9-ZTi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="YUU-71-x7r"/>
+                            <constraint firstItem="N3h-Mt-tgc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pCO-MW-E78"/>
+                            <constraint firstItem="Isf-Ki-tQj" firstAttribute="top" secondItem="RXz-g9-ZTi" secondAttribute="bottom" constant="40" id="tCH-uS-hsO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clickButton" destination="Isf-Ki-tQj" id="3lF-su-YPH"/>
+                        <outlet property="infoLabel" destination="RXz-g9-ZTi" id="w23-jq-793"/>
+                        <outlet property="modeLabel" destination="N3h-Mt-tgc" id="5vk-Ue-kLh"/>
+                        <outlet property="modeSwitch" destination="n5Y-Ti-ZFc" id="Z9R-a6-88s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="330" y="90"/>
         </scene>
     </scenes>
 </document>

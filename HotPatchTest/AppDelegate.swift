@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import JSPatch
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let publicKey = "ABC"
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        JPEngine.start()
+        
+        
+        
+        
+        
         return true
     }
 
